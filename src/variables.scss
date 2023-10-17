@@ -1,0 +1,17 @@
+$main-color1: #E9EDF1;
+$main-color2: #1B1F36;
+$main-color3: #0f111e;
+$color3: #7080B6;
+$color4: #84839D;
+$color5: #6C6495;
+
+@mixin btn() {
+    display: block;
+    border-radius: 5px;
+    background-color: $color5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: $color3;
+    } 
+}

@@ -1,0 +1,49 @@
+@import '/src/variables.scss';
+
+.header {
+    background-color: $main-color3;
+}
+
+.wrapper {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menuItem {
+    font-size: 20px;
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        width: 0;
+        left: 50%;
+        height: 2px;
+        background-color: $main-color1;
+        transition: all 0.3s ease;
+    }
+    &:hover::before {
+        width: 100%;
+        left: 0;
+    }
+}
+
+.logo {
+    font-size: 40px;
+    color: $main-color1;
+}
+
+.avatar {
+    max-width: 50px;
+    img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,52 @@
+@import '/src/variables.scss';
+
+.main {
+    background-color: $main-color2;
+}
+
+.wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    padding: 20px;
+    border: 2px solid $main-color1;
+    border-radius: 10px;
+}
+
+.labelInput {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.label {
+    font-size: 20px;
+}
+
+.input {
+    background-color: $main-color3;
+    color: $main-color1;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.btn {
+    @include btn();
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 10px 20px;
+    &.disabled {
+        cursor: auto;
+        opacity: 0.6;
+        background-color: $color4;
+        &:hover {
+            background-color: $color4;
+        }
+    }
+}
