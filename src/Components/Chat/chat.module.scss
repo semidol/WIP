@@ -1,0 +1,72 @@
+@import '/src/variables.scss';
+
+.chat {
+   height: 100%;
+   width: 100%;
+   padding: 10px;
+   margin: 0 auto;
+   border: 4px solid $color5;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+}
+
+.fieldMessage {
+   padding: 0 10px 0;
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   overflow: auto;
+
+   @include scroll($main-color3, transparent);
+}
+
+.inputBlock {
+   padding-top: 5px;
+   display: flex;
+   gap: 20px;
+   align-items: end;
+}
+
+.input {
+   @include absoluteWrap();
+   @include scroll($color5, transparent);
+
+   max-height: 100px;
+   overflow-y: auto;
+   display: inline-block;
+   padding: 12px 11px;
+   align-items: center;
+   flex-grow: 1;
+   background-color: $main-color3;
+   border-radius: 5px;
+   &:empty:before {
+      content: attr(data-placeholder);
+      opacity: 0.4;
+      display: inline-block;
+   }
+}
+
+.btn {
+   @include btn();
+   padding: 11px;
+   font-size: 18px;
+}
+
+.message {
+   @include absoluteWrap();
+   padding: 10px;
+   border-radius: 15px;
+   max-width: 70%;
+   margin-bottom: 10px;
+}
+
+.appMessage {
+   background-color: $main-color3;
+}
+
+.userMessage {
+   align-self: end;
+   background-color: $color5;
+}

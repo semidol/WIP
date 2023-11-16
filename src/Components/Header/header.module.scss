@@ -42,8 +42,29 @@
 }
 
 .avatar {
-    max-width: 50px;
+    max-width: 40px;
     img {
         width: 100%;
     }
+}
+
+.logOut {
+    @include btn();
+    font-size: 18px;
+    padding: 10px;
+    position: relative;
+}
+
+.logIn {
+    @include btn();
+    font-size: 18px;
+    padding: 10px;
+}
+
+.loader {
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    position: absolute;
+    width: 30px;
+    height: 30px;
 }

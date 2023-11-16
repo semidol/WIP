@@ -1,0 +1,43 @@
+@import '/src/variables.scss';
+
+.main {
+    background-color: $main-color2;
+}
+
+.wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.loginReg {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.loginRegItem {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: 20px;
+    @include underline();
+    &.active {
+        opacity: 1;
+        &::before {
+            width: 100%;
+            left: 0;
+        }
+    }
+}
+
+.login {
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+.registration {
+    margin: 0 auto;
+    max-width: 300px;
+}

@@ -1,0 +1,18 @@
+@import '/src/variables.scss';
+
+.main {
+    background-color: $main-color2;
+    height: 100px;
+}
+
+.wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 100%;
+}
+
+.chat {
+    margin: 0 auto;
+    max-width: 800px;
+    height: 100%;
+}

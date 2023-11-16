@@ -10,8 +10,54 @@ $color5: #6C6495;
     border-radius: 5px;
     background-color: $color5;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
     &:hover {
         background-color: $color3;
     } 
+}
+
+@mixin absoluteWrap() {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+@mixin scroll($scroll-main-color, $scroll-bg-color) {
+    scrollbar-width: thin;
+    scrollbar-color: $scroll-main-color $scroll-bg-color;
+    &::-webkit-scrollbar {
+       width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+       background: $scroll-bg-color;
+    }
+    &::-webkit-scrollbar-thumb {
+       background-color: $scroll-main-color;
+       border-radius: 5px;
+    }
+}
+
+@mixin underline() {
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        width: 0;
+        left: 50%;
+        height: 2px;
+        background-color: $main-color1;
+        transition: all 0.3s ease;
+    }
+    &:hover::before {
+        width: 100%;
+        left: 0;
+    }
 }
